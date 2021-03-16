@@ -1,149 +1,309 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
-*{ 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Mulish';
-    color: white;
-   
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish";
+  color: white;
 }
-body{
-    background-image: linear-gradient(to bottom right, rgb(22, 22, 22), rgb(44, 44, 42));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(22, 22, 22),
+    rgb(44, 44, 42)
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
-.navbar{
-    background-color:#ffffff00; 
-    
-   
+/* Nvabar edititing */
+.navbar {
+  background-color: #ffffff00;
 }
 
-.menu_active{
-    color: rgb(238, 234, 12) !important; 
-    font-weight: bold;
-    border-bottom: 1px solid rgb(238, 234, 12);
-} 
-.navbar-brand{
-    font-size: 1.9rem;
-    color: #ffffff;
-    
+.menu_active {
+  color: rgb(238, 234, 12) !important;
+  font-weight: bold;
+  border-bottom: 1px solid rgb(238, 234, 12);
+}
+.navbar-brand {
+  font-size: 1.9rem;
+  color: #ffffff;
 }
 .bg-white {
-    background-color: #fff0 !important;
+  background-color: #fff0 !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 .navbar-light .navbar-brand {
-    color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color:rgb(238, 234, 12);
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(238, 234, 12);
 }
-.custom-toggler.navbar-toggler { 
-    border-color: rgb(229, 255, 0); 
-} 
+#naviconsize {
+  max-width: 120px;
+  max-height: 55px;
+}
+/* navbar toggle button */
+.custom-toggler.navbar-toggler {
+  border-color: rgb(229, 255, 0);
+}
 
 .btn-outline-warning {
-    color:rgb(238, 234, 12);
-    border-color: rgb(238, 234, 12);
-    border-radius: 30px;
-    transition: 0.5s;
+  color: rgb(238, 234, 12);
+  border-color: rgb(238, 234, 12);
+  border-radius: 30px;
+  transition: 0.5s;
 }
 .brand-name {
-    color: rgb(238, 234, 12);
+  color: rgb(238, 234, 12);
 }
 .navbar-dark .navbar-brand {
-   
-    color: rgb(238, 234, 12);
+  color: rgb(238, 234, 12);
 }
-#profileimg{
-    border-radius:0;
-} 
-
+#profileimg {
+  border-radius: 0;
+}
 
 .container {
+  position: relative;
+}
 
-    position: relative;
-   
-  }
-  
-  .www {
-    margin-top: 20px;
-    display: block;
-    width: 100%;
-    height: auto;
-   
+.www {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  height: auto;
 
-   
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
-    
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 100%;
-    right: 0;
-    background-color: #0000002d;
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: .5s ease;
-    
-  }
-  
-  .container:hover .overlay {
-    width: 48%;
-    left: 50%;
-  }
-  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(22, 22, 22),
+    rgba(44, 44, 42, 0.678)
+  );
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  width: 48%;
+  left: 50%;
+}
+
+#text {
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#text {
+  padding: 20px;
+}
+
+@media screen and (min-width: 601px) {
   #text {
-    
-    white-space: nowrap; 
-    color: rgb(255, 255, 255);
     font-size: 15px;
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-
   }
+}
 
-  #text{
+@media screen and (max-width: 600px) {
+  #text {
+    font-size: 10px;
+  }
+}
+
+#text > b {
+  color: rgb(238, 234, 12);
+}
+
+#header {
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+#imgpad {
+  padding: 0;
+}
+
+#pagebar {
+  color: black;
+  text-align: center;
+  height: 230px;
+  padding-top: 30px;
+
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(41, 41, 41),
+    rgb(0, 0, 0)
+  );
+  box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.48);
+}
+.border-img {
+  min-height: 60px;
+  border-radius: 100%;
+  border: 3px solid rgba(187, 186, 186, 0.541);
+}
+.icons > b {
+  color: rgb(238, 234, 12);
+}
+
+.down-sizing {
+  height: 500px;
+}
+
+#rainbgsize {
+  padding-bottom: 5%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#rainbgsize > h1 {
+  background-color: rgba(0, 0, 0, 0.329);
+}
+
+#costum {
+  height: 400px;
+  width: 100%;
+}
+#crdimg {
+  height: 300px !important;
+}
+.fourgrids {
+  /* margin-left: 30px; */
+  margin: auto;
+  padding-top: 15%;
+  height: 300px;
+  width: 300px;
+}
+
+/* cardfilp haha h ahh hahh ah */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+
+  height: 300px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgba(187, 187, 187, 0);
+  color: black;
+}
+
+.flip-card-back {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(22, 22, 22),
+    rgba(44, 44, 42, 0.678)
+  );
+  color: white;
+  transform: rotateY(180deg);
+  margin-top: 42px;
+  height: 260px;
+}
+
+
+
+/* grid */
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px 
+
+) {
+  .column {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  /* For mobile phones: */
+  .column {
+    width: 100%;
+  }
+}
+
+/* foooooooooooooooooooooooter
+ */
+
+ #footmain{
+   background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.445),
+    rgba(0, 0, 0, 0.233)
+    
+  );
+   box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.48);
+   margin-top: 30px;
+   height: 300px;
+   width: 100%;
+ }
+ #footmain > p{
+    color: rgba(255, 255, 255, 0.699);
+   text-align: center;
+   background-color: rgba(0, 0, 0, 0.089);
   
-    padding: 20px;
-  }
   
-  @media screen and (min-width: 601px) {
-   #text {
-      font-size: 15px;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    #text {
-      font-size: 10px;
-    }
-  }
+ }
+
+ /* pleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeez */
 
 
 
-  #text > b{
-      color: rgb(238, 234, 12);
-  }
-
-  #header {
-    height: 100%;
-    padding-bottom: 50px;
-  }
-
-  #imgpad{
-      padding: 0;
-  }
